@@ -19,13 +19,28 @@ namespace ConsoleUI
         private static void CarTest()
         {
             CarManager carManager = new CarManager(new EfCarDal());
+
             //var result = carManager.GetById(1);
             //Console.WriteLine(result.Name);
 
-            foreach (var car in carManager.GetCarDetails())
-            {
-                Console.WriteLine(car.CarName + " " + car.BrandName + " " + car.ColorName + " " + car.DailyPrice);
-            }
+            //foreach (var car in carManager.GetCarDetails())
+            //{
+            //    Console.WriteLine(car.CarName + " " + car.BrandName + " " + car.ColorName + " " + car.DailyPrice);
+            //}
+
+            //Car newCar = new Car() { BrandId = 3, ColorId = 4, DailyPrice = 200, ModelYear = 2017, Name = "Toyota Corolla", Description = "Corolla: Artık tüm yolculuklarınız eşsiz ve daha güçlü!" };
+
+            //var result = carManager.Add(newCar);
+
+            //if(result.Success)
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
+
         }
 
         private static void BrandTest()
