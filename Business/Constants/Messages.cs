@@ -10,5 +10,9 @@ namespace Business.Constants
     {
         public static string Added = "Ekleme işlemi başarılı";
         public static string AdditionFailed = "Ekleme işlemi başarısız";
+        public static string AddedRental = "Araba kiralama işlemi başarılı";
+        public static string AdditionFailedRental = "Araba kiralama işlemi başarısız";
+        public static string FailedDelivery = "Araba teslimat işlemi başarısız";
+        public static string DeliveredCar = "Araba teslimat işlemi başarılı";
     }
 }

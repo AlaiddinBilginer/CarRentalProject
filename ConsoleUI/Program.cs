@@ -13,7 +13,9 @@ namespace ConsoleUI
             //BrandTest();
             //CarTest();
             //ColorTest();
-
+            //UserTest();
+            //CustomerTest();
+            RentalTest();
         }
 
         private static void CarTest()
@@ -64,6 +66,44 @@ namespace ConsoleUI
             //}
 
             //colorManager.Add(new Color { Name = "Mavi" });
+        }
+
+        private static void UserTest()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+
+            User newUser = new User() { FirstName = "Alaiddin", LastName = "Bilginer", Email = "alaiddin@gmail.com", Password = "123456789" };
+
+            userManager.Add(newUser);
+        }
+
+        private static void CustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+
+            Customer newCustomer = new Customer() { UserId = 1, CompanyName = "Toyota"};
+
+            customerManager.Add(newCustomer);
+        }
+
+        private static void RentalTest()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+
+            //Rental newRental = new Rental() { CarId = 2, CustomerId = 5};
+
+            //var result = rentalManager.Add(newRental);
+
+            //var result = rentalManager.Deliver(1);
+
+            //if (result.Success)
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
         }
     }
 }
