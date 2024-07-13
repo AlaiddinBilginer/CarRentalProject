@@ -24,12 +24,14 @@ namespace Business.Concrete
 
         public IResult Add(Car car)
         {
-            if(car.Name.Length >= 2 && car.DailyPrice > 0)
+            if(car.ModelYear > DateTime.Now.Year)
             {
-                _carDal.Add(car);
-                return new SuccessResult(Messages.Added);
+                return new ErrorResult(Messages.FailedModelYear);
             }
-            return new ErrorResult(Messages.AdditionFailed);
+
+            _carDal.Add(car);
+            return new SuccessResult(Messages.Added);
+
         }
 
         public IResult Delete(Car car)

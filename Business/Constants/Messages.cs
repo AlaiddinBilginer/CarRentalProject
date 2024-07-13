@@ -14,5 +14,6 @@ namespace Business.Constants
         public static string AdditionFailedRental = "Araba kiralama işlemi başarısız";
         public static string FailedDelivery = "Araba teslimat işlemi başarısız";
         public static string DeliveredCar = "Araba teslimat işlemi başarılı";
+        public static string FailedModelYear = "Geçersiz bir model yılı girdiniz";
     }
 }
