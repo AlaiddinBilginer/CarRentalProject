@@ -15,7 +15,7 @@ namespace ConsoleUI
             //ColorTest();
             //UserTest();
             //CustomerTest();
-            RentalTest();
+            //RentalTest();
         }
 
         private static void CarTest()
@@ -68,23 +68,23 @@ namespace ConsoleUI
             //colorManager.Add(new Color { Name = "Mavi" });
         }
 
-        private static void UserTest()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
+        //private static void UserTest()
+        //{
+        //    UserManager userManager = new UserManager(new EfUserDal());
 
-            User newUser = new User() { FirstName = "Alaiddin", LastName = "Bilginer", Email = "alaiddin@gmail.com", Password = "123456789" };
+        //    User newUser = new User() { FirstName = "Alaiddin", LastName = "Bilginer", Email = "alaiddin@gmail.com", Password = "123456789" };
 
-            userManager.Add(newUser);
-        }
+        //    userManager.Add(newUser);
+        //}
 
-        private static void CustomerTest()
-        {
-            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+        //private static void CustomerTest()
+        //{
+        //    CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
 
-            Customer newCustomer = new Customer() { UserId = 1, CompanyName = "Toyota"};
+        //    Customer newCustomer = new Customer() { UserId = 1, CompanyName = "Toyota"};
 
-            customerManager.Add(newCustomer);
-        }
+        //    customerManager.Add(newCustomer);
+        //}
 
         private static void RentalTest()
         {

@@ -1,4 +1,5 @@
-﻿using Core.Utilities.DataResults;
+﻿using Core.Entities.Concrete;
+using Core.Utilities.DataResults;
 using Core.Utilities.Results;
 using Entities.Concrete;
 using System;
