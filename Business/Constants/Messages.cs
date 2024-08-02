@@ -30,5 +30,11 @@ namespace Business.Constants
         public static string SuccessfulLogin = "Başarılı giriş";
         public static string UserAlreadyExists = "Kullanıcı mevcut";
         public static string AccessTokenCreated = "Token oluşturuldu";
+
+        public static string RentalDateCannotBeforeToday = "Kira tarihi bugünden önce olamaz";
+        public static string ReturnDateCannotBeEarlierThanRentDate = "Teslim tarihi kiralama tarihinden önce olamaz";
+        public static string ThisCarIsAlreadyRentedInSelectedDateRange = "Bu araba için kiralama işlemi başarısız. Araba zaten kiralandı.";
+        public static string ReturnDateCannotBeLeftBlankAsThisCarWasAlsoRentedAtALaterDate = "Bu araç için iade tarihi boş bırakılamaz çünkü bu araç için gelecekte kiralama var";
+        public static string ThisCarHasNotBeenReturnedYet = "Bu araba henüz iade edilmemiştir";
     }
 }
