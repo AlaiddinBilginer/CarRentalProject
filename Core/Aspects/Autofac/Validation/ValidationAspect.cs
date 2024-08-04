@@ -3,6 +3,7 @@ using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Interceptors;
 using FluentValidation;
 
+
 namespace Core.Aspects.Autofac.Validation
 {
     public class ValidationAspect : MethodInterception
@@ -27,5 +28,7 @@ namespace Core.Aspects.Autofac.Validation
                 ValidationTool.Validate(validator, entity);
             }
         }
+
+
     }
 }

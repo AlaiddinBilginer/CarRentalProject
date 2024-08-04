@@ -59,6 +59,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  ModelYear = c.ModelYear,
                                  BrandId = c.BrandId,
                                  ColorId = c.ColorId,
+                                 Images = context.CarImages.Where(ci => ci.CarId == c.Id).ToList()
                              };
                 return result.ToList();
             }
