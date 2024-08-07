@@ -106,5 +106,18 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpPost("checkAreRulesValid")]
+        public IActionResult CheckAreRulesValid(Rental rental)
+        {
+            var result = _rentalService.CheckAreRulesValid(rental);
+
+            if(result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
     }
 }

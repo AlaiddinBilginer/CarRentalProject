@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Rental : IEntity
+    public class Payment : IEntity
     {
         public int Id { get; set; }
-        public int CarId { get; set; }
+        public int CardId { get; set; }
         public int CustomerId { get; set; }
-        public DateTime RentDate { get; set; } = DateTime.Now;
-        public DateTime ReturnDate { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime PaymentDate { get; set; } = DateTime.Now;
     }
 }

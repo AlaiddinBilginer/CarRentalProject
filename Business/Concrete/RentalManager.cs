@@ -49,7 +49,7 @@ namespace Business.Concrete
         public IResult Deliver(int id)
         {
             var rental = _rentalDal.Get(r => r.Id == id);
-            if (rental == null || rental.ReturnDate != null)
+            if (rental == null)
             {
                 return new ErrorResult(Messages.FailedDelivery);
             }
@@ -77,6 +77,18 @@ namespace Business.Concrete
         public IDataResult<List<RentalDetailDto>> GetRentalDetails()
         {
             return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails());
+        }
+
+        public IResult CheckAreRulesValid(Rental rental)
+        {
+            var result = RulesForAdding(rental);
+
+            if (!result.Success)
+            {
+                return result;
+            }
+
+            return new SuccessResult("Bu araba kiralanabilir");
         }
 
         public IResult RulesForAdding(Rental rental)

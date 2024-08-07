@@ -37,5 +37,6 @@ namespace Business.Constants
         public static string ReturnDateCannotBeLeftBlankAsThisCarWasAlsoRentedAtALaterDate = "Bu araç için iade tarihi boş bırakılamaz çünkü bu araç için gelecekte kiralama var";
         public static string ThisCarHasNotBeenReturnedYet = "Bu araba henüz iade edilmemiştir";
         public static string ColorExist = "Renk zaten mevcut";
+        public static string BrandExist = "Marka zaten mevcut";
     }
 }
